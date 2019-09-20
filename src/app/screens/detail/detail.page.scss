@@ -1,0 +1,70 @@
+.account_detail{
+
+        width: 300px;
+        height: 250px;
+        background-color: red;
+        margin-right: auto;
+        margin-left:auto;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        margin-top: 10px;
+
+}
+
+
+#amount_states{
+
+    background-color:lightgrey;
+    width:100%;
+
+}
+
+
+#amount{
+
+    color: #FFFF;
+}
+
+.amount_button{
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#button_div_style{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#button_style{
+
+    height:100px;
+
+}
+
+#iconStyle {
+    font-size: 25px; //Preferred size here
+}
+
+
+
+img {
+    border-radius: 50%;
+
+    margin-right: auto;
+    margin-left: auto;
+
+  }
+
+  #profile{
+
+    margin-right: auto;
+    margin-left: auto; 
+    text-align: center;
+    height: 85px;
+    width: 85px;
+
+
+  }
+  

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Update Account</ion-title>
+     <ion-buttons slot="secondary">
+        <ion-button (click)="close()"> <ion-icon name="close"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+
+ <form padding   [formGroup]="updateForm" (ngSubmit)="formSubmit(updateForm)" >
+
+
+      <ion-item  no-lines>
+      <ion-label position="floating" >Balance</ion-label>
+     <ion-input type="number" formControlName="balance"></ion-input>
+      </ion-item>
+
+          <ion-item  no-lines>
+      <ion-label position="floating">Overdraft</ion-label>
+     <ion-input type="number"  formControlName="overdaft"></ion-input>
+      </ion-item>
+
+  
+        
+
+       <ion-button ion-button block   type="submit" expand="full" round color="redTheme"  [disabled]="updateForm.invalid" >Update</ion-button>
+
+    </form>
+
+</ion-content>

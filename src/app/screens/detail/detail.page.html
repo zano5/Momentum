@@ -1,0 +1,151 @@
+<ion-header>
+  <ion-toolbar color="redTheme">
+    <ion-title>Account</ion-title>
+
+  <ion-buttons slot="end" (click)="onSignOut()">
+    <ion-button>
+       <ion-icon name="log-out"></ion-icon>
+
+        </ion-button>
+  </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<div id="profile">
+
+<img src="assets/profile.png" alt="Avatar">
+
+
+</div>
+
+<h3 style="text-align: center"> {{info?.name}}</h3>
+
+<p style="margin-left: 5px;"> Swipe Card Left</p>
+
+<ion-slides>
+ <ion-slide *ngFor="let account of info?.accounts">
+<div class="account_detail"> 
+
+
+
+
+
+<h4 id="amount">{{account}}</h4>
+
+
+<ion-row>
+<ion-col col-8>
+<ion-button (click)="retrieveAccountDetail(account)" color="black"> 
+
+View Balance
+
+</ion-button>
+
+</ion-col>
+
+<ion-col col-4>
+
+<ion-button  (click)="updateAmount(account)" color="black">
+
+  <ion-icon name="create"></ion-icon>
+
+</ion-button>
+
+</ion-col>
+
+</ion-row>
+
+
+
+<div *ngIf="view == true">
+
+<div id="amount_states" > Amount</div>
+
+<p id="amount">{{accountInfo?.balance}}</p>
+
+
+<div id="amount_states"> Overdraft</div>
+
+<p id="amount">{{accountInfo?.overdraft}}</p>
+
+</div>
+
+
+
+
+
+</div>
+ 
+
+
+
+
+  
+   
+
+
+
+
+
+
+
+
+
+
+ </ion-slide >
+
+
+
+</ion-slides>
+
+<div class="amount_button" text-center>
+
+
+
+<ion-row>
+
+
+
+<ion-col>
+
+   
+<ion-button  id="button_style"  style="color:black" fill="clear" (click)="presentAccountAdd()">
+  <div id="button_div_style">
+    <ion-icon name="add" large id="iconStyle"></ion-icon>
+      Add Account
+  </div>
+</ion-button>
+
+
+</ion-col>
+
+<ion-col>
+
+
+<ion-button id="button_style"   style="color:black"  fill="clear" (click)="updateList()">
+  <div id="button_div_style">
+    <ion-icon name="card" large id="iconStyle"></ion-icon>
+
+
+    Update Accounts
+
+  </div>
+</ion-button>
+
+
+</ion-col>
+
+
+</ion-row>
+
+
+
+
+
+</div>
+
+
+</ion-content>

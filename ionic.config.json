@@ -1,5 +1,7 @@
 {
   "name": "MomentumZain",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

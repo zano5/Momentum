@@ -1,0 +1,101 @@
+<ion-content style="text-align:center">
+
+
+
+ 
+ 
+
+
+
+
+      <div class="content"> 
+
+
+<ion-row>
+  <ion-col text-center>
+
+
+        <form padding   [formGroup]="loginForm" (ngSubmit)="formSubmit(loginForm)"  >
+
+     
+    <div id="logo">
+
+
+
+ <img src="assets/moment.jpg">
+
+
+
+</div>
+
+         <ion-row align-items-start>
+        <ion-col col-12>
+          <h1><strong>Welcome To Momemtum</strong> </h1>
+        </ion-col>
+
+
+
+      </ion-row>
+
+        <ion-row align-items-start>
+        <ion-col col-12>
+          <h2>Please Login To Your Account</h2>
+        </ion-col>
+
+
+        
+      </ion-row>
+
+
+            <ion-item>
+
+
+              <ion-input type="text" placeholder="Email" formControlName="email">
+              
+              </ion-input>
+
+
+            </ion-item>
+
+
+
+            <ion-item>
+
+
+              <ion-input type="password" placeholder="Password" formControlName="password">
+              
+              </ion-input>
+
+
+            </ion-item>
+
+
+
+            <ion-button  color="redTheme" type="submit" expand="block" [disabled]="loginForm.invalid">Login</ion-button>
+
+
+        </form>
+
+        <div *ngIf="data === false ">
+        <ion-spinner></ion-spinner>
+
+        </div>
+
+
+     
+
+
+
+
+
+           </ion-col>
+</ion-row>
+
+          </div>
+
+
+
+
+
+</ion-content>
+
